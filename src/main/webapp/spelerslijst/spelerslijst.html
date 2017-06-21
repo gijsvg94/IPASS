@@ -1,0 +1,76 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Spelerslijst</title>
+    <link rel="stylesheet" type="text/css" href="spelerslijst.css">
+</head>
+<body>
+<div id="frame">
+    <div id="spelerList">
+        <div class="weatherDiv">
+            <h4>Alle spelers</h4>
+            <span id="add_speler"> <button>add Speler</button></span>
+
+        </div>
+        <div id="search">
+
+            <input placeholder="zoeken..." id="searchInput">
+        </div>
+
+        <div id="tableDiv">
+            <table id="spelerTable">
+                <tbody id="spelerBody">
+                <tr>
+                    <th id="spelerid">SpelerID</th>
+                    <th id="naam">Naam</th>
+                    <th id="status">Status</th>
+                    <th id="teamID">teamID</th>
+                    <th id="deleteT"></th>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span id="close">&times;</span>
+        <div id="inputContainer">
+            <div class="inputRow">
+                <div>
+                    <label for="spelerid">Speler ID): </label>
+                    <input id="spelerid" type="text" class="inputField">
+                </div>
+                <div>
+                    <label for="naam">Naam: </label>
+                    <input id="naam" type="text" class="inputField">
+                </div>
+                <div>
+                    <label for="status">Status: </label>
+                    <input id="status" type="text" class="inputField">
+                </div>
+                <div>
+                    <label for="teamID">team ID: </label>
+                    <input id="teamID" type="text" class="inputField">
+                </div>
+
+                 <div>
+                <button id="cancel">cancel</button>
+                <button id="save">save</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+<script src=spelerslijst.js></script>
+</body>
+</html>

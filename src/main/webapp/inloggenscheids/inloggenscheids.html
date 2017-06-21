@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+</head>
+<body>
+	<form id="loginform">
+		<input type="text" name="username" /> <input type="password"
+			name="password" /> <input type="button" value="login" id="login" onClick="getToken()" />
+	</form>
+	<script>
+		function getToken() {
+			var data = $("#loginform").serialize();
+			$.post("/restservices/authentication", data, function(response) {
+				window.sessionStorage.setItem("sessionToken", response);
+			}).fail(function(jqXHR, textStatus, errorThrown) {
+				console.log(textStatus);
+				console.log(errorThrown);
+			});
+		}
+	</script>
+</body>
+
+</html>
